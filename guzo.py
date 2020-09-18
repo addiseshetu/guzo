@@ -3,7 +3,7 @@ from multiprocessing import Process, Lock, Value
 
 
 def add_500_lock(total, lock):
-    for i in range(100):
+    for i in range(200):
         time.sleep(0.01)
         lock.acquire()
         total.value += 5
@@ -11,7 +11,7 @@ def add_500_lock(total, lock):
 
 
 def sub_500_lock(total, lock):
-    for i in range(100):
+    for i in range(200):
         time.sleep(0.01)
         lock.acquire()
         total.value -= 5
